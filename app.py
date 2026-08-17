@@ -13,11 +13,15 @@ from PIL import Image
 # ============================================================
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ICON_PATH = os.path.join(BASE_DIR, "icon.png")
+ASSETS_DIR = os.path.join(BASE_DIR, "assets")
+
+ICON_PATH = os.path.join(ASSETS_DIR, "icon.png")
+LOGO_PATH = os.path.join(ASSETS_DIR, "logo.png")
+
 
 st.set_page_config(
     page_title="ऋण MITRA | Credit Intelligence",
-    page_icon=Image.open(ICON_PATH),
+    page_icon=PAGE_ICON,
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -36,7 +40,7 @@ except Exception:
     pass
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ICON_PATH = os.path.join(BASE_DIR, "icon.png")
+
 MODEL_DIR = os.path.join(BASE_DIR, "models")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
